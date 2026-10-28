@@ -1,0 +1,1086 @@
+/* ==========================================================================
+   동국e음 (Dongguk e-Eum) — 키워드 중심 대형 타이포그래피 PPT
+   Dark Navy (#0B1220) + Dongguk Brand Orange (#FF6B00)
+   글자 크기 대폭 확대 (30px~68px), 텍스트 군더더기 제거, 실제 스크린샷 내장
+   ========================================================================== */
+
+:root {
+  --bg-slide: #0b1220;
+  --bg-card: #131d33;
+  --bg-card-alt: #16243d;
+  --orange-main: #ff6b00;
+  --orange-light: #ff984f;
+  --orange-bg: #2b1712;
+  --emerald-main: #10b981;
+  --emerald-light: #34d399;
+  --emerald-bg: #0e2225;
+  --sky-main: #38bdf8;
+  --sky-light: #7dd3fc;
+  --sky-bg: #10213d;
+  --rose-main: #fb7185;
+  --rose-light: #fda4af;
+  --rose-bg: #2b1420;
+  --text-white: #ffffff;
+  --text-light: #f8fafc;
+  --text-sub: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-card: #283a5e;
+
+  --font-sans: "Pretendard Variable", "Pretendard", "Malgun Gothic", "맑은 고딕",
+    "Apple SD Gothic Neo", sans-serif;
+  --font-mono: "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #050811;
+  color: var(--text-white);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+#ppt-app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050811;
+}
+
+#ppt-stage {
+  position: relative;
+  width: 1920px;
+  min-width: 1920px;
+  max-width: 1920px;
+  height: 1080px;
+  min-height: 1080px;
+  max-height: 1080px;
+  flex-shrink: 0;
+  background: var(--bg-slide);
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.85);
+  transform-origin: center center;
+}
+
+/* Top Orange Accent Bar */
+.top-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--orange-main);
+  z-index: 10;
+}
+
+/* Slide Container */
+.ppt-slide {
+  position: absolute;
+  inset: 0;
+  padding: 50px 96px 84px 96px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.ppt-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+body.reduce-motion .ppt-slide {
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Slide Header */
+.slide-header {
+  margin-bottom: 30px;
+}
+
+.slide-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 999px;
+  background: var(--orange-bg);
+  border: 2px solid var(--orange-main);
+  color: var(--orange-light);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.slide-meta-pill {
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: #111a2e;
+  border: 1.5px solid #334155;
+  color: var(--text-muted);
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.slide-title {
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--text-white);
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.slide-subtitle {
+  font-size: 26px;
+  color: var(--text-sub);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.slide-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* ==========================================================================
+   Slide 01: Cover (대형 히어로 & 4대 순서 카드)
+   ========================================================================== */
+.cover-hero {
+  margin-top: 10px;
+  margin-bottom: 34px;
+}
+
+.cover-title {
+  font-size: 110px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin: 10px 0 16px;
+  white-space: nowrap;
+}
+
+.cover-title span {
+  color: var(--orange-main);
+}
+
+.cover-lead {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.cover-sublead {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--orange-light);
+  white-space: nowrap;
+}
+
+.cover-4grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  flex: 1;
+}
+
+.cover-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-card);
+  border-radius: 26px;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-card.highlight {
+  border-color: var(--orange-main);
+  background: #18223d;
+}
+
+.cover-card-code {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--orange-main);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.cover-card h3 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.cover-card p {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+.cover-card-time {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.12);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--orange-light);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 02: WHY 1 (세 가지 문제 — 대형 키워드 카드)
+   ========================================================================== */
+.why-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  height: 100%;
+}
+
+.problem-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--rose-main);
+  border-radius: 28px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.problem-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: var(--rose-bg);
+  border: 1.5px solid var(--rose-main);
+  color: var(--rose-light);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.problem-card h3 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.problem-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.problem-bullets li {
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 6px solid var(--orange-main);
+}
+
+.problem-bullets strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.problem-bullets span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.problem-bottom-warn {
+  margin-top: 18px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: var(--rose-bg);
+  border: 1.5px solid var(--rose-main);
+  color: var(--rose-light);
+  font-size: 21px;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 03: WHY 2 (핵심 방향성 대형 연결 배너)
+   ========================================================================== */
+.convergence-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.conv-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.conv-from-box {
+  width: 100%;
+  padding: 24px 28px;
+  border-radius: 22px;
+  background: var(--rose-bg);
+  border: 2px solid var(--rose-main);
+  text-align: center;
+}
+
+.conv-from-box h4 {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--rose-light);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.conv-from-box p {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.conv-arrow {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--orange-main);
+}
+
+.conv-to-box {
+  width: 100%;
+  padding: 32px 28px;
+  border-radius: 24px;
+  background: var(--bg-card-alt);
+  border: 3px solid var(--orange-main);
+  text-align: center;
+  flex: 1;
+}
+
+.conv-to-box h3 {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--orange-light);
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.conv-to-box p {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1.45;
+}
+
+.core-message-hero {
+  padding: 34px 48px;
+  border-radius: 28px;
+  background: var(--orange-bg);
+  border: 3.5px solid var(--orange-main);
+  text-align: center;
+}
+
+.core-message-hero span {
+  display: block;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--orange-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.core-message-hero h3 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--text-white);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 04: HOW 1 (기술 스택 4 + 구현 완료 5)
+   ========================================================================== */
+.tech-4grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.tech-card {
+  background: var(--bg-card);
+  border: 2px solid var(--orange-main);
+  border-radius: 20px;
+  padding: 20px 24px;
+}
+
+.tech-card span {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--orange-light);
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.tech-card h4 {
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.tech-card p {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.done-section-label {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--emerald-light);
+  margin-bottom: 14px;
+  white-space: nowrap;
+}
+
+.done-5grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.done-card {
+  background: var(--emerald-bg);
+  border: 2.5px solid var(--emerald-main);
+  border-radius: 24px;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.done-card.span-2 {
+  grid-column: span 2;
+}
+
+.done-card.span-3 {
+  grid-column: span 3;
+}
+
+.done-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.25);
+  border: 1.5px solid var(--emerald-main);
+  color: var(--emerald-light);
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.done-card h4 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.done-card p {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-sub);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Slide 05: HOW 2 (실제 서비스 스크린샷 2장 배치)
+   ========================================================================== */
+.screen-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  height: 100%;
+}
+
+.screen-shot-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--orange-main);
+  border-radius: 26px;
+  padding: 24px 26px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.screen-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.screen-card-header h3 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.screen-card-badge {
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: var(--emerald-bg);
+  border: 1.5px solid var(--emerald-main);
+  color: var(--emerald-light);
+  font-size: 17px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.screen-img-box {
+  flex: 1;
+  background: #080d18;
+  border: 1.5px solid #283a5e;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  min-height: 0;
+}
+
+.screen-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.screen-card-caption {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--orange-light);
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Slide 06: HOW 3 (향후 개발할 6대 기능)
+   ========================================================================== */
+.roadmap-6grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 26px;
+  height: 100%;
+}
+
+.plan-card {
+  background: var(--sky-bg);
+  border: 2.5px solid var(--sky-main);
+  border-radius: 24px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.22);
+  border: 1.5px solid var(--sky-main);
+  color: var(--sky-light);
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.plan-card h3 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.plan-card p {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-sub);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.plan-effect {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1.5px dashed rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--orange-light);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 07 & 08: CHALLENGES (대형 문제 ➔ 해법 행)
+   ========================================================================== */
+.challenge-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  height: 100%;
+}
+
+.challenge-row {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.ch-prob-box {
+  background: var(--rose-bg);
+  border: 2.5px solid var(--rose-main);
+  border-radius: 26px;
+  padding: 30px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ch-prob-box .ch-label {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--rose-light);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.ch-prob-box h3 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.ch-prob-box p {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+.ch-arrow-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ch-arrow-pill {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--orange-bg);
+  border: 2px solid var(--orange-main);
+  color: var(--orange-light);
+  font-size: 21px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.ch-sol-box {
+  background: var(--bg-card-alt);
+  border: 3px solid var(--orange-main);
+  border-radius: 26px;
+  padding: 30px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ch-sol-box .ch-label {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--orange-light);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.ch-sol-box h3 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.ch-sol-box p {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Slide 09: VISION 1 (6대 요소 네트워크)
+   ========================================================================== */
+.vision-hub-layout {
+  display: grid;
+  grid-template-columns: 1fr 480px 1fr;
+  align-items: center;
+  gap: 34px;
+  height: 100%;
+}
+
+.vision-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.vision-node-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--orange-main);
+  border-radius: 24px;
+  padding: 26px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vision-node-card h4 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.vision-node-card p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.vision-connect-arrow {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--orange-main);
+  white-space: nowrap;
+}
+
+.vision-center-circle {
+  width: 440px;
+  height: 440px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2e1814 0%, #121d33 100%);
+  border: 6px solid var(--orange-main);
+  box-shadow: 0 0 75px rgba(255, 107, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px;
+}
+
+.vision-center-circle span.hub-tag {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--orange-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.vision-center-circle h2 {
+  font-size: 82px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.vision-center-circle h2 em {
+  font-style: normal;
+  color: var(--orange-main);
+}
+
+.vision-center-circle p {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-sub);
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 10: VISION 2 (대형 슬로건 피날레)
+   ========================================================================== */
+.finale-center-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-card);
+  border: 3.5px solid var(--orange-main);
+  border-radius: 38px;
+  padding: 60px;
+}
+
+.finale-quote {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 34px;
+  white-space: nowrap;
+}
+
+.finale-slogan {
+  font-size: 68px;
+  font-weight: 900;
+  color: var(--text-white);
+  margin-bottom: 46px;
+  white-space: nowrap;
+}
+
+.finale-slogan span {
+  color: var(--orange-main);
+}
+
+/* ==========================================================================
+   Bottom Navigation Bar
+   ========================================================================== */
+.ppt-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  padding: 0 96px;
+  background: rgba(8, 13, 24, 0.94);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.ppt-nav-left,
+.ppt-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ppt-btn {
+  padding: 8px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-white);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ppt-btn:hover:not(:disabled) {
+  background: var(--orange-main);
+  border-color: var(--orange-light);
+}
+
+.ppt-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.ppt-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.ppt-dot {
+  width: 38px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ppt-dot.active {
+  background: var(--orange-main);
+  border-color: var(--orange-light);
+  color: var(--text-white);
+}
+
+/* Speaker Notes Panel */
+#notes-panel {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  bottom: 80px;
+  background: rgba(11, 18, 32, 0.98);
+  border: 2.5px solid var(--orange-main);
+  border-radius: 22px;
+  padding: 26px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  z-index: 30;
+}
+
+#notes-panel.hidden {
+  display: none;
+}
+
+.notes-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--orange-light);
+}
+
+#notes-text {
+  font-size: 22px;
+  line-height: 1.65;
+  color: var(--text-white);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Print / PDF Export Styles (16:9 고해상도 PDF 출력용)
+   ========================================================================== */
+@media print {
+  @page {
+    size: 1920px 1080px landscape;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #0B1120 !important;
+    width: 1920px !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #ppt-app {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1920px !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #0B1120 !important;
+  }
+
+  #ppt-stage {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1920px !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #0B1120 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .top-accent-line,
+  .ppt-nav-footer,
+  #notes-panel {
+    display: none !important;
+  }
+
+  .ppt-slide {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    width: 1920px !important;
+    height: 1080px !important;
+    min-height: 1080px !important;
+    max-height: 1080px !important;
+    padding: 50px 96px 84px 96px !important;
+    box-sizing: border-box !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    overflow: hidden !important;
+    background: #0B1120 !important;
+  }
+}

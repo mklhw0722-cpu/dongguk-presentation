@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>동국e음 — 5분 발표 PPT 슬라이드</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ppt-app">
+    <div id="ppt-stage" role="region" aria-label="동국e음 PPT 발표 슬라이드">
+      <div class="top-accent-line"></div>
+
+      <!-- ==================================================================
+           SLIDE 01: 표지 및 발표 구성
+           ================================================================== -->
+      <section class="ppt-slide active" data-slide="0">
+        <div class="slide-header-top">
+          <span class="section-badge">동국대학교 교육학과 프로젝트</span>
+          <span class="slide-meta-pill">SLIDE 01 / 10 · 권장 20초</span>
+        </div>
+
+        <div class="cover-hero">
+          <h1 class="cover-title">동국<span>e</span>음</h1>
+          <p class="cover-lead">교육학과 구성원을 하나로 잇는 소통·지식 네트워크</p>
+          <p class="cover-sublead">정보의 통합 · 경험의 공유 · 구성원 간 연결</p>
+        </div>
+
+        <div class="cover-4grid">
+          <div class="cover-card highlight">
+            <div>
+              <div class="cover-card-code">01 · WHY</div>
+              <h3>왜 필요한가?</h3>
+              <p>정보 분산 · 정보 격차 · 졸업생 단절 문제 진단</p>
+            </div>
+            <div class="cover-card-time">발표 시간: 약 1분</div>
+          </div>
+
+          <div class="cover-card">
+            <div>
+              <div class="cover-card-code">02 · HOW</div>
+              <h3>어떻게 만들었나?</h3>
+              <p>개발 기술 스택 · 구현 완료 5대 기능 · 확장 로드맵</p>
+            </div>
+            <div class="cover-card-time">발표 시간: 약 2분</div>
+          </div>
+
+          <div class="cover-card">
+            <div>
+              <div class="cover-card-code">03 · CHALLENGES</div>
+              <h3>무엇을 해결하나?</h3>
+              <p>회원 인증 · 졸업생 참여 · 채팅 관리 · 정보 정확성</p>
+            </div>
+            <div class="cover-card-time">발표 시간: 약 1분 40초</div>
+          </div>
+
+          <div class="cover-card">
+            <div>
+              <div class="cover-card-code">04 · VISION</div>
+              <h3>어디로 향하는가?</h3>
+              <p>선배의 경험이 후배의 자산이 되는 지속 가능한 생태계</p>
+            </div>
+            <div class="cover-card-time">발표 시간: 약 20초</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 02: WHY 1 — 세 가지 문제 (키워드 중심)
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="1">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">01 · WHY — 프로젝트 필요성</span>
+            <span class="slide-meta-pill">SLIDE 02 / 10 · 권장 40초</span>
+          </div>
+          <h2 class="slide-title">우리가 마주한 3가지 단절과 문제</h2>
+          <p class="slide-subtitle">학과 내 정보와 경험이 분산되어 있으며, 인맥 유무와 졸업 여부에 따라 단절되어 있습니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="why-3col">
+            <article class="problem-card">
+              <div>
+                <span class="problem-tag">PROBLEM 01</span>
+                <h3>01. 정보의 분산</h3>
+                <ul class="problem-bullets">
+                  <li>
+                    <strong>학교·학과 공지 파편화</strong>
+                    <span>포털 · 학과 게시판 · 단톡방 분산</span>
+                  </li>
+                  <li>
+                    <strong>복잡한 졸업요건 확인</strong>
+                    <span>학번별 상이한 기준 대조의 어려움</span>
+                  </li>
+                  <li>
+                    <strong>진로·복수전공 창구 부재</strong>
+                    <span>체계적인 통합 안내 채널 없음</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="problem-bottom-warn">⚠️ 한눈에 찾기 어려움 &amp; 일정 누락</div>
+            </article>
+
+            <article class="problem-card">
+              <div>
+                <span class="problem-tag">PROBLEM 02</span>
+                <h3>02. 정보 격차</h3>
+                <ul class="problem-bullets">
+                  <li>
+                    <strong>개인 인맥에 의존하는 정보</strong>
+                    <span>친한 선배·동기 유무에 따른 편차</span>
+                  </li>
+                  <li>
+                    <strong>수강 후기·진로 경험 비대칭</strong>
+                    <span>알음알음 구두 전달 구조의 한계</span>
+                  </li>
+                  <li>
+                    <strong>신입·편입·복학생 정보 소외</strong>
+                    <span>네트워크 부족 학우의 진입 장벽</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="problem-bottom-warn">⚠️ 지인 유무에 따른 접근성 불평등</div>
+            </article>
+
+            <article class="problem-card">
+              <div>
+                <span class="problem-tag">PROBLEM 03</span>
+                <h3>03. 졸업생 연결 약화</h3>
+                <ul class="problem-bullets">
+                  <li>
+                    <strong>졸업 후 학과 교류 단절</strong>
+                    <span>졸업과 동시에 사라지는 소통 창구</span>
+                  </li>
+                  <li>
+                    <strong>선배들의 진로 노하우 유실</strong>
+                    <span>임용 · 기업 · 대학원 경험 휘발</span>
+                  </li>
+                  <li>
+                    <strong>후배들에게 경험 미축적</strong>
+                    <span>매년 같은 시행착오 반복</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="problem-bottom-warn">⚠️ 소중한 진로 자산의 지속적 유실</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 03: WHY 2 — 해결 방향 연결 및 핵심 메시지
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="2">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">01 · WHY — 핵심 방향성</span>
+            <span class="slide-meta-pill">SLIDE 03 / 10 · 권장 20초</span>
+          </div>
+          <h2 class="slide-title">세 가지 문제에서 하나의 해결 방향으로 연결</h2>
+          <p class="slide-subtitle">분산된 정보를 모으고, 경험을 나누며, 구성원을 잇는 동국e음의 3대 핵심 가치입니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="convergence-3col">
+            <div class="conv-col">
+              <div class="conv-from-box">
+                <h4>01. 정보의 분산</h4>
+                <p>공지 · 요건 · 진로 정보 산재</p>
+              </div>
+              <div class="conv-arrow">▼</div>
+              <div class="conv-to-box">
+                <h3>정보의 통합</h3>
+                <p>학교·학과 공지, 졸업요건, 진로 정보를 하나의 플랫폼에 모아 한눈에 확인</p>
+              </div>
+            </div>
+
+            <div class="conv-col">
+              <div class="conv-from-box">
+                <h4>02. 정보 격차</h4>
+                <p>개인 인맥 의존 · 접근성 편차</p>
+              </div>
+              <div class="conv-arrow">▼</div>
+              <div class="conv-to-box">
+                <h3>경험의 공유</h3>
+                <p>인맥에 상관없이 교육학과 구성원 누구나 수강 후기와 진로 준비 경험을 공유</p>
+              </div>
+            </div>
+
+            <div class="conv-col">
+              <div class="conv-from-box">
+                <h4>03. 졸업생 연결 약화</h4>
+                <p>졸업 후 교류 단절 · 경험 유실</p>
+              </div>
+              <div class="conv-arrow">▼</div>
+              <div class="conv-to-box">
+                <h3>구성원 간 연결</h3>
+                <p>재학생·졸업생·교수님을 잇는 지속 가능한 교육학과 네트워크 구축</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="core-message-hero">
+            <span>CORE DIRECTION · 핵심 메시지</span>
+            <h3>‘정보의 통합 · 경험의 공유 · 구성원 간 연결’</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 04: HOW 1 — 개발 기술 및 현재 구현한 기능
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="3">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">02 · HOW — 개발 기술 및 구현 현황</span>
+            <span class="slide-meta-pill">SLIDE 04 / 10 · 권장 40초</span>
+          </div>
+          <h2 class="slide-title">개발 기술 및 현재 구현 완료 기능</h2>
+          <p class="slide-subtitle">검증된 개발 스택을 기반으로 보안 인증 시스템과 실시간 채팅 기능을 우선 구현 완료했습니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="tech-4grid">
+            <div class="tech-card">
+              <span>TECH 01 · AI DEVELOPMENT</span>
+              <h4>Google Antigravity</h4>
+              <p>AI 에이전트 기반 인터랙션 설계</p>
+            </div>
+            <div class="tech-card">
+              <span>TECH 02 · VERSION &amp; HOSTING</span>
+              <h4>GitHub</h4>
+              <p>버전 관리 및 웹 호스팅 인프라</p>
+            </div>
+            <div class="tech-card">
+              <span>TECH 03 · AUTHENTICATION</span>
+              <h4>Firebase Auth</h4>
+              <p>안전한 이메일 기반 계정 인증</p>
+            </div>
+            <div class="tech-card">
+              <span>TECH 04 · REALTIME DATABASE</span>
+              <h4>Cloud Firestore</h4>
+              <p>실시간 데이터베이스 및 채팅 동기화</p>
+            </div>
+          </div>
+
+          <div class="done-section-label">✓ 현재 구현 완료 기능 (5대 핵심 기능)</div>
+
+          <div class="done-5grid">
+            <div class="done-card span-2">
+              <span class="done-badge">✓ 구현 완료</span>
+              <h4>회원가입 및 로그인</h4>
+              <p>Firebase Auth 연동을 통한 학과 구성원 계정 생성 및 안전한 인증</p>
+            </div>
+            <div class="done-card span-2">
+              <span class="done-badge">✓ 구현 완료</span>
+              <h4>관리자 승인 접근 제어</h4>
+              <p>미승인 계정 차단, 승인된 교육학과 구성원만 내부 데이터 접근 허용</p>
+            </div>
+            <div class="done-card span-2">
+              <span class="done-badge">✓ 구현 완료</span>
+              <h4>관리자 회원 관리</h4>
+              <p>가입 신청 검토, 승인/거절 상태 변경 및 회원 권한 통합 제어</p>
+            </div>
+            <div class="done-card span-3">
+              <span class="done-badge">✓ 구현 완료</span>
+              <h4>1:1 및 단체 실시간 채팅</h4>
+              <p>Cloud Firestore 실시간 리스너 기반 지연 없는 1:1 대화 및 단체방 소통</p>
+            </div>
+            <div class="done-card span-3">
+              <span class="done-badge">✓ 구현 완료</span>
+              <h4>실시간 메시지 읽음 표시</h4>
+              <p>참여자별 메시지 수신 확인 및 읽은 인원수 실시간 동기화</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 05: HOW 2 — 실제 서비스 화면 (업로드 사진 반영)
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="4">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">02 · HOW — 실제 구현 화면</span>
+            <span class="slide-meta-pill">SLIDE 05 / 10 · 권장 25초</span>
+          </div>
+          <h2 class="slide-title">동국e음 실제 서비스 구현 화면</h2>
+          <p class="slide-subtitle">실제 구축된 Firebase 계정 인증/승인 시스템과 Firestore 실시간 학과 대화창 화면입니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="screen-2col">
+            <div class="screen-shot-card">
+              <div class="screen-card-header">
+                <h3>01. Firebase 계정 인증 및 관리자 승인</h3>
+                <span class="screen-card-badge">✓ 실제 화면</span>
+              </div>
+              <div class="screen-img-box">
+                <img src="img/screenshot_auth.png" alt="Firebase 계정 인증 및 관리자 승인 시스템 실제 화면" />
+              </div>
+              <div class="screen-card-caption">
+                회원가입 · 승인 대기(pending) 보안 규칙 강제 · 동국e음 회원 전용 로그인
+              </div>
+            </div>
+
+            <div class="screen-shot-card">
+              <div class="screen-card-header">
+                <h3>02. 학과 전용 1:1 및 단체 실시간 대화창</h3>
+                <span class="screen-card-badge">✓ 실제 화면</span>
+              </div>
+              <div class="screen-img-box">
+                <img src="img/screenshot_chat.png" alt="동국e음 학과 전용 대화창 실제 화면" />
+              </div>
+              <div class="screen-card-caption">
+                교수 면담 · 선후배 멘토링 · 단체 채팅방 개설 · 실시간 메시지 읽음 카운트
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 06: HOW 3 — 향후 개발할 기능 (확장 로드맵)
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="5">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">02 · HOW — 향후 확장 로드맵</span>
+            <span class="slide-meta-pill">SLIDE 06 / 10 · 권장 55초</span>
+          </div>
+          <h2 class="slide-title">향후 개발할 기능 (6대 확장 로드맵)</h2>
+          <p class="slide-subtitle">구축된 인증·채팅 코어 위에 정보 통합, 경험 공유, 구성원 연결 기능을 단계별로 확장합니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="roadmap-6grid">
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 정보 통합 01</span>
+                <h3>공식 학교·학과 공지 연동</h3>
+                <p>포털 및 학과 홈페이지 주요 공지사항 자동 수집·통합 안내</p>
+              </div>
+              <div class="plan-effect">➔ 분산 공지 탐색 시간 단축</div>
+            </div>
+
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 정보 통합 02</span>
+                <h3>학사 일정 캘린더</h3>
+                <p>수강신청, 교직 이수, 졸업시험, 주요 행사 학과 맞춤형 캘린더</p>
+              </div>
+              <div class="plan-effect">➔ 학과 핵심 일정 누락 방지</div>
+            </div>
+
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 정보 통합 03</span>
+                <h3>졸업요건 자가점검 개선</h3>
+                <p>입학 연도(학번) 및 다전공별 잔여 학점·필수 요건 정밀 대조</p>
+              </div>
+              <div class="plan-effect">➔ 개인 맞춤형 졸업 가이드</div>
+            </div>
+
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 경험 공유 04</span>
+                <h3>진로·복수전공별 공유방</h3>
+                <p>중등 임용, 기업 HRD, 교육행정, 대학원 트랙별 전문 정보 공유</p>
+              </div>
+              <div class="plan-effect">➔ 인맥 없는 학우도 평등하게 접근</div>
+            </div>
+
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 구성원 연결 05</span>
+                <h3>졸업생 프로필 &amp; 멘토링</h3>
+                <p>선배들의 사회 진출 이력 열람 및 간편 질의응답 멘토링 연결</p>
+              </div>
+              <div class="plan-effect">➔ 선배의 경험이 학과 자산으로 축적</div>
+            </div>
+
+            <div class="plan-card">
+              <div>
+                <span class="plan-badge">🚀 구성원 연결 06</span>
+                <h3>교수 상담 신청 연계</h3>
+                <p>지도교수님 면담 가능 일정 확인, 상담 사전 신청 및 학업 지도</p>
+              </div>
+              <div class="plan-effect">➔ 교수-학생 간 원활한 소통 지원</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 07: CHALLENGES 1 — 회원 인증 & 졸업생 참여
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="6">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">03 · CHALLENGES — 난제 ① · ②</span>
+            <span class="slide-meta-pill">SLIDE 07 / 10 · 권장 50초</span>
+          </div>
+          <h2 class="slide-title">예상되는 난제와 해결 방향 (인증 · 참여)</h2>
+          <p class="slide-subtitle">운영 과정에서 예상되는 핵심 과제와 이를 해결할 구체적 해법을 연결했습니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="challenge-rows">
+            <div class="challenge-row">
+              <div class="ch-prob-box">
+                <div class="ch-label">⚠️ 난제 ① 회원 인증의 정확성 (PROBLEM)</div>
+                <h3>실제 교육학과 구성원 검증의 어려움</h3>
+                <p>단순 가입만으로는 실제 동국대 교육학과 구성원인지 확인하기 어려워 외부인 유입 및 신뢰도 저하 우려</p>
+              </div>
+              <div class="ch-arrow-col">
+                <span class="ch-arrow-pill">해결 연결 ➔</span>
+              </div>
+              <div class="ch-sol-box">
+                <div class="ch-label">💡 해결 방향 ① (SOLUTION)</div>
+                <h3>학교 이메일 인증 + 별도 소속 확인 절차</h3>
+                <p>동국대학교 웹메일 1차 인증 도입 및 학번·증빙 자료 대조를 통한 관리자 최종 소속 승인 결합</p>
+              </div>
+            </div>
+
+            <div class="challenge-row">
+              <div class="ch-prob-box">
+                <div class="ch-label">⚠️ 난제 ② 졸업생의 지속적인 참여 (PROBLEM)</div>
+                <h3>낮은 이용 동기와 멘토링 부담</h3>
+                <p>학사 공지 중심 플랫폼에 졸업생이 접속할 유인이 부족하며, 장기 멘토링에 대한 심리적·시간적 부담 존재</p>
+              </div>
+              <div class="ch-arrow-col">
+                <span class="ch-arrow-pill">해결 연결 ➔</span>
+              </div>
+              <div class="ch-sol-box">
+                <div class="ch-label">💡 해결 방향 ② (SOLUTION)</div>
+                <h3>동문 네트워킹 제공 + 간편 Q&amp;A 멘토링</h3>
+                <p>현직 동문 간 교류 채널을 마련하고, 가벼운 단답형 질문 중심의 ‘간편 멘토링’으로 참여 장벽 완화</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 08: CHALLENGES 2 — 채팅 관리 & 정보 정확성
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="7">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">03 · CHALLENGES — 난제 ③ · ④</span>
+            <span class="slide-meta-pill">SLIDE 08 / 10 · 권장 50초</span>
+          </div>
+          <h2 class="slide-title">예상되는 난제와 해결 방향 (채팅 관리 · 정확성)</h2>
+          <p class="slide-subtitle">안전한 커뮤니티 소통 환경과 신뢰도 높은 학사 데이터를 유지하기 위한 대책입니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="challenge-rows">
+            <div class="challenge-row">
+              <div class="ch-prob-box">
+                <div class="ch-label">⚠️ 난제 ③ 실시간 채팅 관리 (PROBLEM)</div>
+                <h3>부적절한 발언 및 개인정보 노출</h3>
+                <p>실시간 대화 중 발생할 수 있는 부적절한 언행 및 연락처·사생활 등 민감한 개인정보 노출 위험</p>
+              </div>
+              <div class="ch-arrow-col">
+                <span class="ch-arrow-pill">해결 연결 ➔</span>
+              </div>
+              <div class="ch-sol-box">
+                <div class="ch-label">💡 해결 방향 ③ (SOLUTION)</div>
+                <h3>신고·차단 기능 탑재 + 운영 가이드라인</h3>
+                <p>채팅방 내 즉각적인 메시지 신고·사용자 차단 기능 구현 및 학과 커뮤니티 윤리 기준과 제재 원칙 마련</p>
+              </div>
+            </div>
+
+            <div class="challenge-row">
+              <div class="ch-prob-box">
+                <div class="ch-label">⚠️ 난제 ④ 정보 정확성과 유지보수 (PROBLEM)</div>
+                <h3>입학 연도별 졸업요건 차이 &amp; AI 개발 오류</h3>
+                <p>학번마다 상이한 이수 기준 오안내 시 학사 피해 우려 및 AI 개발 과정의 로직·데이터 오류 검증 필요</p>
+              </div>
+              <div class="ch-arrow-col">
+                <span class="ch-arrow-pill">해결 연결 ➔</span>
+              </div>
+              <div class="ch-sol-box">
+                <div class="ch-label">💡 해결 방향 ④ (SOLUTION)</div>
+                <h3>공식 학사 자료 100% 대조 + 반복 교차 검증</h3>
+                <p>학교 공식 학사일람 및 학과 내규 원문을 100% 대조 반영하고, 학번별 시나리오 대상 반복 테스트 수행</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 09: VISION 1 — 6대 요소가 하나로 연결되는 네트워크
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="8">
+        <header class="slide-header">
+          <div class="slide-header-top">
+            <span class="section-badge">04 · VISION — 앞으로의 방향</span>
+            <span class="slide-meta-pill">SLIDE 09 / 10 · 권장 10초</span>
+          </div>
+          <h2 class="slide-title">분리되어 있던 6대 요소가 ‘동국e음’으로 연결</h2>
+          <p class="slide-subtitle">학교·학과 정보, 재학생, 졸업생, 교수, 학습 경험, 진로 정보가 하나의 네트워크로 모입니다.</p>
+        </header>
+
+        <div class="slide-body">
+          <div class="vision-hub-layout">
+            <div class="vision-side-col">
+              <div class="vision-node-card">
+                <div>
+                  <h4>🏛️ 학교·학과 정보</h4>
+                  <p>공지사항 · 학사일정 · 졸업요건 통합</p>
+                </div>
+                <span class="vision-connect-arrow">━━▶</span>
+              </div>
+              <div class="vision-node-card">
+                <div>
+                  <h4>📚 학습 경험</h4>
+                  <p>수강 후기 · 다전공 이수 노하우 축적</p>
+                </div>
+                <span class="vision-connect-arrow">━━▶</span>
+              </div>
+              <div class="vision-node-card">
+                <div>
+                  <h4>🚀 진로 정보</h4>
+                  <p>교직 · 기업 · 대학원 트랙별 공유</p>
+                </div>
+                <span class="vision-connect-arrow">━━▶</span>
+              </div>
+            </div>
+
+            <div class="vision-center-circle">
+              <span class="hub-tag">CENTRAL NETWORK</span>
+              <h2>동국<em>e</em>음</h2>
+              <p>정보의 통합<br />경험의 공유<br />구성원 간 연결</p>
+            </div>
+
+            <div class="vision-side-col">
+              <div class="vision-node-card">
+                <span class="vision-connect-arrow">◀━━</span>
+                <div style="text-align: right;">
+                  <h4>🎓 재학생</h4>
+                  <p>학업 탐색 · 실시간 소통 · 진로 준비</p>
+                </div>
+              </div>
+              <div class="vision-node-card">
+                <span class="vision-connect-arrow">◀━━</span>
+                <div style="text-align: right;">
+                  <h4>🤝 졸업생</h4>
+                  <p>현장 경험 공유 · 동문 네트워킹 · 멘토링</p>
+                </div>
+              </div>
+              <div class="vision-node-card">
+                <span class="vision-connect-arrow">◀━━</span>
+                <div style="text-align: right;">
+                  <h4>🧭 교수</h4>
+                  <p>상담 신청 연계 · 학업 및 진로 지도</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SLIDE 10: VISION 2 — 최종 슬로건 및 피날레
+           ================================================================== -->
+      <section class="ppt-slide" data-slide="9">
+        <div class="slide-header-top" style="margin-bottom: 24px;">
+          <span class="section-badge">04 · VISION — 최종 슬로건</span>
+          <span class="slide-meta-pill">SLIDE 10 / 10 · 권장 10초</span>
+        </div>
+
+        <div class="slide-body">
+          <div class="finale-center-box">
+            <span class="section-badge" style="margin-bottom: 28px;">DONGGUK UNIVERSITY · DEPARTMENT OF EDUCATION</span>
+            <p class="finale-quote">“정보를 잇고, 경험을 나누고, 사람을 연결하다.”</p>
+            <h2 class="finale-slogan">선배의 경험이 후배의 자산이 되는 공간, <span>동국e음</span></h2>
+            <p style="font-size: 26px; color: var(--text-sub); font-weight: 700;">경청해 주셔서 감사합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SPEAKER NOTES PANEL (Hidden by Default, Toggle with 'N')
+           ================================================================== -->
+      <aside id="notes-panel" class="hidden" aria-label="발표자 노트">
+        <div class="notes-top">
+          <span id="notes-title">슬라이드 01 발표자 노트</span>
+          <span id="notes-time">권장 20초</span>
+        </div>
+        <p id="notes-text"></p>
+      </aside>
+
+      <!-- ==================================================================
+           BOTTOM NAVIGATION BAR
+           ================================================================== -->
+      <footer class="ppt-bottom-bar">
+        <div class="ppt-nav-left">
+          <button type="button" class="ppt-btn" id="btn-prev">← 이전</button>
+          <div class="ppt-dots" id="ppt-dots"></div>
+          <button type="button" class="ppt-btn" id="btn-next">다음 →</button>
+        </div>
+
+        <div class="ppt-nav-right">
+          <span id="timer-display" style="font-family: var(--font-mono); font-size: 17px; color: var(--text-muted); margin-right: 8px;">00:00 / 05:00</span>
+          <button type="button" class="ppt-btn" id="btn-notes" title="발표자 대본 보기 (단축키 N)">발표자 노트 (N)</button>
+          <button type="button" class="ppt-btn" id="btn-fullscreen" title="전체 화면 전환 (단축키 F)">전체 화면 (F)</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
